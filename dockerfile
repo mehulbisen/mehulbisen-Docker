@@ -1,6 +1,6 @@
 FROM centos:7
 RUN yum install httpd -y
-WORKDIR /usr/local/apache2/htdocs
-RUN echo "hello" > /usr/local/apache2/htdocs/index.html
+WORKDIR /var/www/html/
+RUN echo "hello" > /var/www/html/index.html
 EXPOSE 80
 CMD ["httpd" , "start"]
